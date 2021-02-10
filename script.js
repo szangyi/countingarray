@@ -1,11 +1,11 @@
 "use strict";
 
-window.addEventListener("DOMContentLoaded", arrayCounter);
+window.addEventListener("DOMContentLoaded", countingArray);
 
 const arr = [];
 let counter = 0;
 
-function arrayCounter() {
+function countingArray() {
   arr.unshift(counter);
   counter++;
 
@@ -13,7 +13,7 @@ function arrayCounter() {
     arr.pop(arr);
   }
 
-  setTimeout(arrayCounter, 1000);
+  setTimeout(countingArray, 1000);
 
   console.log(arr);
 }
