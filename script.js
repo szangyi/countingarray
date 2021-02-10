@@ -1,32 +1,19 @@
-//------------------------------------------------EXERCISSES----------------------------------------------------//
-const people = ["Harry", "Ron", "Hermione", "Draco", "Fred"];
+"use strict";
 
-let result;
+window.addEventListener("DOMContentLoaded", arrayCounter);
 
-result = people.splice(result, 1);
+const arr = [];
+let counter = 0;
 
-console.log(result);
-console.log(people);
+function arrayCounter() {
+  arr.unshift(counter);
+  counter++;
 
-//push adds
-//pop removes last
-//slice??
-//splice insert inbetween
-//people[1] replace Ginny with Ron
-//adds Fred and George
-// indexOf Finds index
-//splice(result, 1) Removes everything after 0
+  if (counter > 9) {
+    arr.pop(arr);
+  }
 
-//Creates array from string
-const letters = Array.from("abcdefghijkl");
+  setTimeout(arrayCounter, 1000);
 
-console.log(letters);
-
-const str = "abcdefghijkl";
-
-//Converts all as an Array
-const arr1 = str.split();
-//split individual letters into array
-const arr2 = Array.from(str);
-console.log(arr1);
-console.log(arr2);
+  console.log(arr);
+}
